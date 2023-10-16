@@ -2,7 +2,7 @@
   class="flex items-center justify-between text-blue-400 text-lg font-bold text-center mb-4"
 >
   <h1>{{ title }}</h1>
-  <app-button
+  <app-button *ngIf="hasRoute('/')"
     color="{{showAddTask ? '#f43f5e' : '#34d399'}}"
     text="{{showAddTask ? 'Close' : 'Add'}}"
     (btnClick)="toggleAddTask()"
