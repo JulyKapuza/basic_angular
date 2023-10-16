@@ -23,4 +23,10 @@ export class TasksComponent {
         () => (this.tasks = this.tasks.filter((el) => el.id !== task.id))
       );
   }
+
+  toggleReminder(task: Task){
+    task.reminder = !task.reminder
+    this.taskService.updateTaskReminder(task).subscribe()
+    console.log( task.reminder)
+  }
 }
