@@ -1,9 +1,10 @@
-<form class="border rounded-[10px] mb-2 p-2 w-[70%] mx-auto">
+<form *ngIf="showAddTask" class="border rounded-[10px] mb-2 p-2 w-[70%] mx-auto" (ngSubmit)="onSubmit()">
   <div class="flex flex-col">
     <label for="text" class="text-lg text-cyan-600">Task</label>
     <input
       type="text"
       name="text"
+      [(ngModel)]="text"
       id="text"
       placeholder="Add task"
       class="border border-cyan-700 rounded-[10px] px-2 py-1"
@@ -14,19 +15,21 @@
     <input
       type="text"
       name="day"
+      [(ngModel)]="day"
       id="day"
       placeholder="Add Day & Time"
       class="border border-cyan-700 rounded-[10px] px-2 py-1"
     />
   </div>
-  <div class="flex flex-col">
+  <div class="flex items-center justify-between">
     <label for="reminder" class="text-lg text-cyan-600">Set Reminder</label>
     <input
       type="checkbox"
       name="reminder"
+      [(ngModel)]="reminder"
       id="reminder"
       class="border border-cyan-700 rounded-[10px] px-2 py-1 w-4 h-4"
     />
   </div>
-  <button type="submit">Add tasks</button>
+  <button type="submit" class="border p-2 mt-2 bg-cyan-600 text-white rounded-[10px] w-full">Add tasks</button>
 </form>

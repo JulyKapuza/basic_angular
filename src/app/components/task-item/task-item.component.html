@@ -1,5 +1,5 @@
 <div
-  [ngClass]="{ 'bg-cyan-400': task?.reminder }"
+  [ngClass]="{reminder: task?.reminder }"
   class="mb-1 bg-sky-200 py-2 px-5 rounded-[8px] cursor-pointer"
   (dblclick)="onToggle(task)"
 >
