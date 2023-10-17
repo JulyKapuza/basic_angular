@@ -9,7 +9,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   faMagnifyingGlass = faMagnifyingGlass;
    menu=[
-  {name:'Home', path:'/home'},
+  {name:'Home', path:'/'},
   {name:'Products', path:'/products'},
   {name:'About', path:'/about'},
   {name:'Contacts', path:'/contacts'},
