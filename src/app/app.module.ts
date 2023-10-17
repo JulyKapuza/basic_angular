@@ -19,10 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', component: TasksComponent },
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'task', component: TasksComponent },
+  // { path: 'task', component: TasksComponent },
 ];
 
 @NgModule({

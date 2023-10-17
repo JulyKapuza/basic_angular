@@ -1,13 +1,9 @@
-<header class="sticky top-0 z-40">
-    <div class="flex  items-center justify-between bg-teal-700 px-5 ">
-      <h3 class="font-bold text-xl text-teal-50 font-serif">NewSite</h3> 
+<header class="sticky top-0 mb-5 z-40 ">
+    <div class="flex  items-center justify-between h-[80px] bg-teal-400 px-5 shadow ">
+      <h3 class="font-bold text-4xl text-teal-950 font-logo">eKart</h3> 
         <nav>
-            <ul class="flex p-4 gap-3 text-xs text-slate-800 ">
-                <li><a routerLink="#" >Help</a> </li>
-                <li><a routerLink="#" >Exchange & Returns</a></li>
-                <li><a routerLink="#" >OrderTracker</a> </li>
-                <li><a routerLink="#" >SingUp/Login</a></li>
-                
+            <ul class="flex p-4 gap-3 text-sm font-medium text-slate-700 ">
+                <li *ngFor="let item of menuTop"><a routerLink="#" >{{item.name}}</a> </li>
             </ul>
         </nav>
     </div>
