@@ -17,8 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderHomeComponent } from './components/header-home/header-home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { SearchComponent } from './components/product-list/search/search.component';
+import { ContainerComponent } from './components/container/container.component';
+import { SearchComponent } from './components/container/search/search.component';
+import { ProductListComponent } from './components/container/product-list/product-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,8 +40,9 @@ const appRoutes: Routes = [
     HeaderHomeComponent,
     NavbarComponent,
     HomeComponent,
-    ProductListComponent,
+    ContainerComponent,
     SearchComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

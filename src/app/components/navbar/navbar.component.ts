@@ -11,6 +11,8 @@ export class NavbarComponent {
    menu=[
   {name:'Home', path:'/'},
   {name:'Products', path:'/products'},
+  {name:'Sale', path:'/about'},
+  {name:'New Arrival', path:'/about'},
   {name:'About', path:'/about'},
   {name:'Contacts', path:'/contacts'},
  ]

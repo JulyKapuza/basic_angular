@@ -1,0 +1,14 @@
+<div class="relative h-[50px] w-[400px] py-1">
+  <input
+    [(ngModel)]="searchText"
+    type="text"
+    placeholder="Search"
+    class="px-2 outline-none border border-teal-300 rounded-[8px] h-full w-full"
+  />
+  <fa-icon
+    [ngStyle]="{ color: '#2dd4bf' }"
+    [icon]="faMagnifyingGlass"
+    class="absolute top-0 right-3 translate-y-[50%] cursor-pointer"
+  ></fa-icon>
+</div>
+<div class="mb-5 text-sm text-white/[0.7] ">Search result for: {{ searchText }}</div>

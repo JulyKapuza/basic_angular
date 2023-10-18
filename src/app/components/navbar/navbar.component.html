@@ -2,16 +2,4 @@
   <div class="flex gap-10 text-lg font-bold text-teal-200 py-2">
     <a *ngFor="let item of menu" href="{{item.path}}">{{item.name}}</a>
   </div>
-  <div class="relative h-[50px] py-1">
-    <input
-      type="text"
-      placeholder="Search"
-      class="px-2 outline-none border border-teal-300 rounded-[8px] h-full"
-    />
-    <fa-icon
-      [ngStyle]="{ color: '#2dd4bf' }"
-      [icon]="faMagnifyingGlass"
-      class="absolute top-0 right-3 translate-y-[50%] cursor-pointer"
-    ></fa-icon>
-  </div>
 </div>
