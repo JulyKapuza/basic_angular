@@ -18,6 +18,7 @@ import { HeaderHomeComponent } from './components/header-home/header-home.compon
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { SearchComponent } from './components/product-list/search/search.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     HomeComponent,
     ProductListComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
