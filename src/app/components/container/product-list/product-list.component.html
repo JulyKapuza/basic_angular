@@ -14,7 +14,10 @@
   
     </div>
     <div class="relative">
-        <img [src]="product.imageURL" class="relative">
+        <div class="h-[270px]">
+            <img [src]="product.imageURL" class="relative h-full w-full " height="190" width="190">
+        </div>
+       
         <div class="absolute bottom-0 text-white-800 bg-slate-800 px-2 text-xl">{{product.price}}</div>
     </div>
 
