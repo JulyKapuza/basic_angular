@@ -1,1 +1,16 @@
-<p>product-list works!</p>
+<div class="text-teal-50">
+  <img [src]="product.pImage" />
+  <p>Name: {{ product.name }}</p>
+  <p>Price: {{ product.price }}</p>
+  <p>Color: {{ product.color }}</p>
+  <p>
+    Name:
+    {{
+      product.inStock > 0 ? "Only " + product.inStock + " left" : "Not in stock"
+    }}
+  </p>
+  <button [disabled]="!(product.inStock > 0)" class="bg-teal-500 p-2">
+    Buy Now
+  </button>
+  <input [value]="name" class="text-slate-950 px-2 py-2" />
+</div>
