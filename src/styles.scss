@@ -9,3 +9,37 @@
     padding: 0;
     font-family: Alegreya;
 }
+
+
+$sc_color: #2dd4bf;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba($sc_color, 0.3) rgba($sc_color, 0.6);
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba($sc_color, 0.3);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba($sc_color, 0.6);
+  border-radius: 3px;
+}
+
+:root {
+  font-family: 'Poppins', 'Nunito Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}

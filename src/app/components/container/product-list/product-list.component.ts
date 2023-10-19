@@ -237,7 +237,7 @@ export class ProductListComponent {
       price: 30,
       is_in_inventory: false,
       items_left: 4,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/BRIDGPORT_ADVICE-BLACK_1_800x800.jpg?v=1576567903",
+      imageURL: "https://zala.bt/uploads/products/2022/hush-puppies-824-447358.jpg",
       slug: "bridgport-advice"
     },
     {
@@ -253,7 +253,7 @@ export class ProductListComponent {
       discountPrice:45,
       is_in_inventory: true,
       items_left: 5,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/Beck-Black_800x800.jpg",
+      imageURL: "https://dynamic.zacdn.com/b4IKqMLQukfjaBONoT8-yeXoqUs=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/hush-puppies-8050-0271573-2.jpg",
       slug: "beck"
     },
     {
@@ -268,7 +268,7 @@ export class ProductListComponent {
       price: 70,
       is_in_inventory: true,
       items_left: 6,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/fester-Tan_800x800.jpg?v=1575537531",
+      imageURL: "https://www.brantano.co.uk/cdn/shop/products/gbt-27719-52460-f-a-1.jpg?v=1660222270",
       slug: "fester"
     },
     {
@@ -283,7 +283,7 @@ export class ProductListComponent {
       price: 75,
       is_in_inventory: true,
       items_left: 7,
-      imageURL: "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/PIXEL-TAN_800x800.jpg?v=1577420506",
+      imageURL: "https://i.etsystatic.com/14176273/r/il/0e800c/2155961056/il_570xN.2155961056_6902.jpg",
       slug: "pixel"
     },
     {
@@ -498,7 +498,7 @@ export class ProductListComponent {
       price: 70,
       is_in_inventory: true,
       items_left: 3,
-      imageURL: "https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7599294868804d78a1b1ab6f01718a5e_9366/Club_C_Revenge_Men's_Shoes_White_FV9877_01_standard.jpg",
+      imageURL: "https://www.outbacksylt.com/files/image/id/10434/fixed/1/w/1000/h/1000/n/reebok-club-c-revenge-chalk-und-teal-ef3091-1.jpg",
       slug: "club-c-revenge-mens"
     },
     {
@@ -534,4 +534,8 @@ export class ProductListComponent {
     }
   ];
 
+  totalProduct = this.products.length
+
+  productInStock = this.products.filter(el=>el.is_in_inventory).length
+  productOutOfStock = this.products.filter(el=>!el.is_in_inventory).length
 }

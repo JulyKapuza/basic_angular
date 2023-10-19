@@ -20,6 +20,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ContainerComponent } from './components/container/container.component';
 import { SearchComponent } from './components/container/search/search.component';
 import { ProductListComponent } from './components/container/product-list/product-list.component';
+import { ProductComponent } from './components/container/product-list/product/product.component';
+import { FilterComponent } from './components/container/product-list/filter/filter.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,6 +45,8 @@ const appRoutes: Routes = [
     ContainerComponent,
     SearchComponent,
     ProductListComponent,
+    ProductComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
