@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input,OnChanges, SimpleChanges } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product-list',
@@ -599,25 +599,33 @@ export class ProductListComponent {
       slug: 'michael-feburary-sk8-hi',
     },
   ];
-  filteredProducts: any = this.products
-  
+
+  @Input() searchText: string = '';
+  filteredProducts: any = this.products;
+
   totalProduct = this.products.length;
   productInStock = this.products.filter((el) => el.is_in_inventory).length;
   productOutOfStock = this.products.filter((el) => !el.is_in_inventory).length;
 
   selectedFilterRadioButton: string = 'all';
-
-
-  updateFilteredProducts() {
-    if (this.selectedFilterRadioButton === 'all') {
-      this.filteredProducts = this.products;
-    } else {
-      this.filteredProducts = this.products.filter((product) => product.is_in_inventory.toString() === this.selectedFilterRadioButton);
+  
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['searchText'] ) {
+      this.updateFilteredProducts();
     }
+  }
+ 
+  updateFilteredProducts() {
+    this.filteredProducts = this.products.filter((product) => {
+      const matchesSearch = this.searchText === '' || product.name.toLowerCase().includes(this.searchText.toLowerCase());
+      const matchesFilter = this.selectedFilterRadioButton === 'all' || product.is_in_inventory.toString() === this.selectedFilterRadioButton;
+      return matchesSearch && matchesFilter;
+    });
   }
 
   onFilterChange(value: string) {
-    this.selectedFilterRadioButton = value
+    this.selectedFilterRadioButton = value;
     this.updateFilteredProducts();
   }
+  
 }

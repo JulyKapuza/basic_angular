@@ -4,6 +4,7 @@
     type="text"
     placeholder="Search"
     class="px-2 outline-none border border-teal-300 h-full w-full"
+    (input)="onSearchChanged()"
   />
   <fa-icon
     [ngStyle]="{ color: '#2dd4bf' }"
