@@ -4,7 +4,7 @@
   [outOfStock]="productOutOfStock"
   (selectedChange)="onFilterChange($event)"
 ></app-filter>
-<div class="grid grid-cols-4 gap-4 h-[800px] overflow-y-auto px-2 pt-5">
+<div class="grid grid-cols-4 gap-4 h-[400px] overflow-y-auto px-2 pt-5">
   <div *ngFor="let product of filteredProducts">
     <app-product
     [product]="product"
