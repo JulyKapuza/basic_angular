@@ -2,4 +2,4 @@
   <app-search (searchChanged)="setSearchText($event)"></app-search>
 </div>
 <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
-<app-product-details *ngIf="productListComponent.selectedProduct"></app-product-details>
+<app-product-details *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></app-product-details>

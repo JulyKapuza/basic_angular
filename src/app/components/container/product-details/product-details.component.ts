@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { ProductListComponent } from '../product-list/product-list.component';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent {
-  faXmark=faXmark
+  @Input() productListComp: ProductListComponent | undefined;
+  faXmark = faXmark;
 
-product:any;
+  product: any;
+  ngOnInit() {
+    this.product = this?.productListComp?.selectedProduct;
+  }
 }
