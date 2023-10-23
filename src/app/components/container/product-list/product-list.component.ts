@@ -1,4 +1,4 @@
-import { Component, Input,OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product-list',
@@ -602,23 +602,28 @@ export class ProductListComponent {
 
   @Input() searchText: string = '';
   filteredProducts: any = this.products;
-
+  selectedProduct:any;
+  
   totalProduct = this.products.length;
   productInStock = this.products.filter((el) => el.is_in_inventory).length;
   productOutOfStock = this.products.filter((el) => !el.is_in_inventory).length;
 
   selectedFilterRadioButton: string = 'all';
-  
+
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['searchText'] ) {
+    if (changes['searchText']) {
       this.updateFilteredProducts();
     }
   }
- 
+
   updateFilteredProducts() {
     this.filteredProducts = this.products.filter((product) => {
-      const matchesSearch = this.searchText === '' || product.name.toLowerCase().includes(this.searchText.toLowerCase());
-      const matchesFilter = this.selectedFilterRadioButton === 'all' || product.is_in_inventory.toString() === this.selectedFilterRadioButton;
+      const matchesSearch =
+        this.searchText === '' ||
+        product.name.toLowerCase().includes(this.searchText.toLowerCase());
+      const matchesFilter =
+        this.selectedFilterRadioButton === 'all' ||
+        product.is_in_inventory.toString() === this.selectedFilterRadioButton;
       return matchesSearch && matchesFilter;
     });
   }
@@ -627,5 +632,4 @@ export class ProductListComponent {
     this.selectedFilterRadioButton = value;
     this.updateFilteredProducts();
   }
-  
 }

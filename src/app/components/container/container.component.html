@@ -1,4 +1,5 @@
 <div class="flex justify-center">
   <app-search (searchChanged)="setSearchText($event)"></app-search>
 </div>
-<app-product-list [searchText]="searchText"></app-product-list>
+<app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+<app-product-details *ngIf="productListComponent.selectedProduct"></app-product-details>

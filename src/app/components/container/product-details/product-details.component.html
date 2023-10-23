@@ -1,0 +1,40 @@
+<div
+  class="fixed top-0 right-0 bg-teal-500 z-50 h-screen px-5 pt-20 overflow-y-scroll"
+>
+  <div class="flex justify-end">
+    <fa-icon
+      [ngStyle]="{ color: 'gray' }"
+      [icon]="faXmark"
+      class="cursor-pointer"
+    ></fa-icon>
+  </div>
+
+  <div class="flex flex-col">
+    <img
+      src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+      width="350"
+    />
+    <span class="block mt-2 font-medium text-lg">Name</span>
+    <div class="flex gap-3 mb-4">
+      <div class="bg-slate-950 text-white px-2 py-1 rounded-[5px]">Men</div>
+      <div class="bg-slate-950 text-white px-2 py-1 rounded-[5px]">Men</div>
+      <div class="bg-slate-950 text-white px-2 py-1 rounded-[5px]">Men</div>
+    </div>
+    <div
+      class="bg-cyan-300 border border-cyan-600 border-2 py-5 flex px-2 gap-2 items-center rounded-[5px] mb-4"
+    >
+      <span>Price Each Pair:</span>
+      <div class="bg-rose-500 text-white px-2 py-1 rounded-[5px] line-through">
+        $699
+      </div>
+      <div class="bg-lime-400 text-slate-950 px-2 py-1 rounded-[5px]">$599</div>
+      <span>(Inclusive of all taxes)</span>
+    </div>
+    <div>
+      <div class="border-b border-gray-200">Available size</div>
+    </div>
+    <div>
+      <div class="border-b border-gray-200">Available color</div>
+    </div>
+  </div>
+</div>
