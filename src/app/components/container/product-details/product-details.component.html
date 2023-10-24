@@ -1,8 +1,8 @@
-<div
+<div *ngIf="product"
   class="fixed top-0 right-0 bg-teal-500 z-50 h-screen px-5 pt-20 overflow-y-scroll"
 >
   {{ product.name }}
-  <div class="flex justify-end">
+  <div class="flex justify-end" (click)="close()">
     <fa-icon
       [ngStyle]="{ color: 'gray' }"
       [icon]="faXmark"

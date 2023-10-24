@@ -23,6 +23,7 @@ import { ProductListComponent } from './components/container/product-list/produc
 import { ProductComponent } from './components/container/product-list/product/product.component';
 import { FilterComponent } from './components/container/product-list/filter/filter.component';
 import { ProductDetailsComponent } from './components/container/product-details/product-details.component';
+import { FeatureBrandComponent } from './components/container/feature-brand/feature-brand.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     ProductComponent,
     FilterComponent,
     ProductDetailsComponent,
+    FeatureBrandComponent,
   ],
   imports: [
     BrowserModule,
