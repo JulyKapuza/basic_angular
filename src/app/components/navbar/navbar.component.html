@@ -1,5 +1,5 @@
 <div class="flex justify-between border-b border-teal-300 py-1">
   <div class="flex gap-10 text-lg font-bold text-teal-200 py-2">
-    <a *ngFor="let item of menu" href="{{item.path}}">{{item.name}}</a>
+    <a *ngFor="let item of menu" routerLink="{{item.path}}">{{item.name}}</a>
   </div>
 </div>

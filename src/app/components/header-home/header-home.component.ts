@@ -10,7 +10,7 @@ export class HeaderHomeComponent {
   {name:'Help', path:'/'},
   {name:'Exchange & Returns', path:'/'},
   {name:'OrderTracker', path:'/'},
-  {name:'SingUp/Login', path:'/'},
+  {name:'SingUp/Login', path:'login'},
  ]
 
 

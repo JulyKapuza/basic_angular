@@ -25,11 +25,14 @@ import { FilterComponent } from './components/container/product-list/filter/filt
 import { ProductDetailsComponent } from './components/container/product-details/product-details.component';
 import { FeatureBrandComponent } from './components/container/feature-brand/feature-brand.component';
 import { DemoComponent } from './components/demo/demo.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { AddcontactComponent } from './components/contacts/addcontact/addcontact.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'sale', component: DemoComponent },
+  // { path: '', component: HomeComponent },
+  // { path: 'about', component: AboutComponent },
+  // { path: 'sale', component: DemoComponent },
   
   // { path: 'task', component: TasksComponent },
 ];
@@ -55,6 +58,9 @@ const appRoutes: Routes = [
     ProductDetailsComponent,
     FeatureBrandComponent,
     DemoComponent,
+    ContactsComponent,
+    AddcontactComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
