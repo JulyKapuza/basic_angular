@@ -1,5 +1,9 @@
-<div *ngIf="product"
-  class="fixed top-0 right-0 bg-teal-500 z-50 h-screen px-5 pt-20 overflow-y-scroll"
+<div *ngIf="product">
+  <div class="bg-slate-500/[.5] w-screen h-screen absolute top-0 left-0 -mx-50">
+effdfssdgdg
+  </div>
+<div 
+  class="fixed top-0 right-0 bg-cyan-500 z-50 h-screen px-5 pt-20 overflow-y-scroll"
 >
   {{ product.name }}
   <div class="flex justify-end" (click)="close()">
@@ -32,10 +36,10 @@
         class="bg-rose-500 text-white px-2 py-1 rounded-[5px] line-through"
         *ngIf="product.discountPrice"
       >
-        $ {{ product.price }}
+        {{ product.price | currency }}
       </div>
       <div class="bg-lime-400 text-slate-700 px-2 py-1 rounded-[5px]">
-        ${{ product.discountPrice ? product.discountPrice : product.price }}
+        {{ product.discountPrice ? product.discountPrice : product.price | currency }}
       </div>
       <span>(Inclusive of all taxes)</span>
     </div>
@@ -77,3 +81,5 @@
     </div>
   </div>
 </div>
+</div>
+

@@ -3,7 +3,7 @@
     [(ngModel)]="searchText"
     type="text"
     placeholder="Search"
-    class="px-2 outline-none border border-teal-300 h-full w-full"
+    class="px-2 outline-none border border-cyan-300 h-full w-full"
     (input)="onSearchChanged()"
   />
   <fa-icon
@@ -13,6 +13,6 @@
   ></fa-icon>
   <div *ngIf="!!searchText" class="absolute -bottom-6 text-sm text-white/[0.7]">
     Search result for:
-    <span class="text-teal-300 text-base font-medium">{{ searchText }}</span>
+    <span class="text-cyan-300 text-base font-medium">{{ searchText }}</span>
   </div>
 </div>

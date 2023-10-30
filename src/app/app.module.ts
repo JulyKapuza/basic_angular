@@ -28,6 +28,7 @@ import { DemoComponent } from './components/demo/demo.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AddcontactComponent } from './components/contacts/addcontact/addcontact.component';
 import { LoginComponent } from './components/login/login.component';
+import { StatusComponent } from './components/status/status.component';
 
 const appRoutes: Routes = [
   // { path: '', component: HomeComponent },
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     ContactsComponent,
     AddcontactComponent,
     LoginComponent,
+    StatusComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,7 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    // RouterModule.forRoot(appRoutes, { enableTracing: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],

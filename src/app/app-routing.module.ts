@@ -5,9 +5,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AddcontactComponent } from './components/contacts/addcontact/addcontact.component';
 import { LoginComponent } from './components/login/login.component';
+import { StatusComponent } from './components/status/status.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
     path: 'contacts',
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: 'edit/:id', component: AddcontactComponent },
     ],
   },
-  {path:'login', component: LoginComponent}
+  {path:'login', component: LoginComponent},
+  {path:'**', component: StatusComponent}
 ];
 
 @NgModule({
