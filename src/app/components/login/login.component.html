@@ -1,3 +1,24 @@
-<div>
-    <h2>User Login</h2>
+<div class=" absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[400px] shadow-lg shadow-cyan-300/20 p-4">
+    <h2 class="text-center text-cyan-200">User Login</h2>
+    <form class="w-full flex flex-col gap-2" #loginForm="ngForm" (submit)="proceedLogin(loginForm)">
+        <div class="flex flex-col gap-2 w-full">
+            <label class="text-cyan-200"> User name</label>
+            <input ngModel name="username" type="text" required placeholder="Enter your name" class="h-10 px-4 border-cyan-400 focus:outline-none focus:border text-lg placeholder:text-gray-700">
+        </div>
+        <!-- <div class="flex flex-col gap-2 w-full">
+            <label class="text-cyan-200"> User email</label>
+            <input ngModel name="email" type="email" required placeholder="Enter you email" class="h-10 px-4 border-cyan-400 focus:outline-none focus:border text-lg placeholder:text-gray-700">
+        </div> -->
+        <div class="flex flex-col gap-2">
+            <label class="text-cyan-200" >Password</label>
+            <input ngModel name="password" required type="password" placeholder="Enter you password" class="h-10 px-4 border-cyan-400  text-lg focus:outline-none focus:border">
+        </div>
+        <div class="flex items-center justify-center">
+            <button type="submit" class="bg-cyan-600 py-1 px-3 text-lg font-bold mt-4 ">Login</button>
+        </div>
+       
+       <a>Register</a>
+    </form>
+    
+    
 </div>
