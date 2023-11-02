@@ -13,6 +13,12 @@ export class UserService {
 
     return this.http.post('https://fakestoreapi.com/auth/login', inputData )
   }
+isLogged(){
+ return localStorage.getItem('token') !==null
+}
 
+getToken(){
+  return localStorage.getItem('token') !==null? localStorage.getItem('token'): ''
+}
 
 }
